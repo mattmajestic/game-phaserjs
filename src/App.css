@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.github-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensure it's above the game canvas */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.github-link img {
+  width: 30px; /* Adjust as necessary */
+  height: 30px; /* Adjust as necessary */
+}.github-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensure it's above the game canvas */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.github-link img {
+  width: 30px; /* Adjust as necessary */
+  height: 30px; /* Adjust as necessary */
+}
+/* Resets default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevents scrolling */
+  background-color: #000000; /* Set the background color of the page to black */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for the Phaser game container */
+.phaser-container {
+  width: 800px; /* Match the width of the Phaser game */
+  height: 600px; /* Match the height of the Phaser game */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the game container on the screen */
+  border: 2px solid #ffffff; /* Set the border to white */
 }
