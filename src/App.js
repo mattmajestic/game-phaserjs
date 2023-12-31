@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 import './App.css';
 
 function App() {
+  
     useEffect(() => {
         const config = {
             type: Phaser.AUTO,
@@ -48,7 +49,7 @@ function App() {
           this.add.text(this.cameras.main.centerX, 20, 'Majestic Coding Game', titleStyle).setOrigin(0.5, 0);
       
 
-            startText = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY / 2, 'Click to Start', textStyle);
+            startText = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY / 2, 'Welcome', textStyle);
             startText.setOrigin(0.5, 0.5).setInteractive();
 
             enterText = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY / 2 + 60, 'Press Enter to Start', textStyle);
@@ -99,9 +100,17 @@ function App() {
         }
 
         function startGame() {
-            console.log('Starting game!');
-            countdownText.setVisible(false);
-            // Placeholder for game start logic
+          console.log('Starting game!');
+          countdownText.setVisible(false);
+
+          // Create an input field for the player's name
+          var playerName = prompt("Please enter your name:");
+
+          // Create a confirm dialog for the difficulty level
+          var difficultyLevel = window.confirm("Select OK for easy level, Cancel for hard level.") ? "easy" : "hard";
+
+          // Placeholder for game start logic
+          console.log('Game started by player:', playerName, 'with difficulty level:', difficultyLevel);
         }
 
         return () => {
@@ -109,7 +118,11 @@ function App() {
         };
     }, []);
 
-    return <div id="phaser-game-container" className="phaser-container"></div>;
+    return (
+      <div>
+          <div id="phaser-game-container" className="phaser-container"></div>
+      </div>
+  );
 }
 
 export default App;
