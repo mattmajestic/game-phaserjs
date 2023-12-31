@@ -46,7 +46,7 @@ function App() {
               align: 'center'
           };
       
-          this.add.text(this.cameras.main.centerX, 20, 'Majestic Coding Game', titleStyle).setOrigin(0.5, 0);
+          this.add.text(this.cameras.main.centerX, 20, 'Majestic Game', titleStyle).setOrigin(0.5, 0);
       
 
             startText = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY / 2, 'Welcome', textStyle);
